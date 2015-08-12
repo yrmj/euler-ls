@@ -1,2 +1,2 @@
 # euler-ls
-some Project Euler problems in LiveScript
+Some Project Euler problems in LiveScript.
