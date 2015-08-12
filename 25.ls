@@ -1,15 +1,8 @@
-{filter, even, sum} = require \prelude-ls
+{filter, even, sum, Func} = require \prelude-ls
 BigInt = require \big-integer
 
-# (a -> b) -> (a -> b)
-memoise = (f) ->
-    memo = {}
-    (arg) ->
-        memo[arg] = f arg unless memo[arg]
-        memo[arg]
-
 # BigInt -> BigInt
-fibonacci = memoise (n) ->
+fibonacci = Func.memoize (n) ->
     n = BigInt n
     if (n.compare 2) is 1 then fibonacci(n - 1) .add fibonacci (n - 2) else BigInt 1
 
