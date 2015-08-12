@@ -1,14 +1,7 @@
-{filter, even, sum} = require \prelude-ls
-
-# (a -> b) -> (a -> b)
-memoise = (f) ->
-    memo = {}
-    (arg) ->
-        memo[arg] = f arg unless memo[arg]
-        memo[arg]
+{filter, even, sum, Func} = require \prelude-ls
 
 # Number -> Number
-fibonacci = memoise (n) ->
+fibonacci = Func.memoize (n) ->
     if n > 1 then fibonacci(n - 1) + fibonacci (n - 2) else 1
 
 x = 0
