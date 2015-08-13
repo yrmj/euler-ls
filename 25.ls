@@ -1,4 +1,4 @@
-{filter, even, sum, Func} = require \prelude-ls
+{Func} = require \prelude-ls
 BigInt = require \big-integer
 
 # Number -> BigInt
