@@ -1,4 +1,3 @@
-{read-file} = require \fs
 request = require \request
 {sort, zip, map, sum, chars} = require \prelude-ls
 
